@@ -1,25 +1,25 @@
 class Tc < Formula
   desc "A CLI utility for counting LLM tokens, similar to Unix wc"
   homepage "https://github.com/kulesh/tc"
-  version "0.1.2"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/tc/releases/download/v0.1.2/token-counter-bin-aarch64-apple-darwin.tar.xz"
-      sha256 "7f60b39a708892dc5e4cea23a312a413b62b14dc41c93e4b5b805c88a9b3d11f"
+      url "https://github.com/kulesh/tc/releases/download/v0.1.4/token-counter-bin-aarch64-apple-darwin.tar.xz"
+      sha256 "7fed57ba2d8fde711d0bed873493386de0b52cd20164b4ad1868207dfd186f86"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/tc/releases/download/v0.1.2/token-counter-bin-x86_64-apple-darwin.tar.xz"
-      sha256 "8bae3160b69bc426689ea048e6e3b2f328bd928edb0596a3ea6bc8f3e09faabf"
+      url "https://github.com/kulesh/tc/releases/download/v0.1.4/token-counter-bin-x86_64-apple-darwin.tar.xz"
+      sha256 "d01da99acadf0d3480c1e6b15be53fcab3651dc0a90eb554ba014fe16f4eaa27"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/tc/releases/download/v0.1.2/token-counter-bin-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c7cd3b6c578d26df462a316d05749140b3c58827c9cb80eb1bb6e23c04352474"
+      url "https://github.com/kulesh/tc/releases/download/v0.1.4/token-counter-bin-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "15f0482f14b977d637a85bf2c7caf37295f0ff981361e0f3626380682ff747a1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/tc/releases/download/v0.1.2/token-counter-bin-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "a0e53d4871119c03c2e1feb74622d4fb9ea53ee7067f8f3f4df958773ebb4420"
+      url "https://github.com/kulesh/tc/releases/download/v0.1.4/token-counter-bin-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5672955546bf5e69fbf264874fe68dccc42cfd372adabb108921f0f71cab952e"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
