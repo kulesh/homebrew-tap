@@ -1,25 +1,25 @@
 class AiobscuraTui < Formula
   desc "AI Agent Activity Monitor - Terminal UI"
   homepage "https://github.com/kulesh/aiobscura"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.0/aiobscura-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "a3d298e6bf7f576709c6000c046dee777198a8baa98c506f15c9558aa4d454a0"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.1/aiobscura-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "b11e50b7839958976a6d75549915b07cba230c363c7907e13605136e117ecf12"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.0/aiobscura-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "ff9c0308d3cfe12a3a2b208b0388879a53cdabbf8af0a7fb3f29694d2ddff059"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.1/aiobscura-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "5edf59fa10edb2f812a7c3116412032cf9b68b85020180cfc0625dde3557d0be"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.0/aiobscura-tui-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b32ad8cc93686ff6586c5f0891155e176e0fb8ecaadcf061c83e5e247ca13ddd"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.1/aiobscura-tui-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0b86cd5d2bf69d3d95a6393b415d0ea2c8539aca68c43b1f0e81b334d62444d4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.0/aiobscura-tui-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "41d68bf38d5b1fed22f424332c7d5bc6dfd3fe90fa708f7659c98993bf00934c"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.1/aiobscura-tui-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "96ee26514f645037c6812c26afb25b1b77f3a782147aaa5f355133fec7f7958a"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,22 +47,10 @@ class AiobscuraTui < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "aiobscura", "aiobscura-debug-claude", "aiobscura-debug-claude-watch", "aiobscura-debug-codex",
-"aiobscura-debug-codex-watch", "aiobscura-sync"
-    end
-    if OS.mac? && Hardware::CPU.intel?
-      bin.install "aiobscura", "aiobscura-debug-claude", "aiobscura-debug-claude-watch", "aiobscura-debug-codex",
-"aiobscura-debug-codex-watch", "aiobscura-sync"
-    end
-    if OS.linux? && Hardware::CPU.arm?
-      bin.install "aiobscura", "aiobscura-debug-claude", "aiobscura-debug-claude-watch", "aiobscura-debug-codex",
-"aiobscura-debug-codex-watch", "aiobscura-sync"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "aiobscura", "aiobscura-debug-claude", "aiobscura-debug-claude-watch", "aiobscura-debug-codex",
-"aiobscura-debug-codex-watch", "aiobscura-sync"
-    end
+    bin.install "aiobscura", "aiobscura-sync" if OS.mac? && Hardware::CPU.arm?
+    bin.install "aiobscura", "aiobscura-sync" if OS.mac? && Hardware::CPU.intel?
+    bin.install "aiobscura", "aiobscura-sync" if OS.linux? && Hardware::CPU.arm?
+    bin.install "aiobscura", "aiobscura-sync" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
