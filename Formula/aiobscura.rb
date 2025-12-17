@@ -1,25 +1,25 @@
 class Aiobscura < Formula
   desc "AI Agent Activity Monitor"
   homepage "https://github.com/kulesh/aiobscura"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.3/aiobscura-aarch64-apple-darwin.tar.xz"
-      sha256 "648170108cacd918173b0c4501970ac841bedee043169b852380c1074456dc42"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.4/aiobscura-aarch64-apple-darwin.tar.xz"
+      sha256 "382a217d79e2ad708e167d3435b9b4cc225d969abe115374d4482e54a1ec02a3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.3/aiobscura-x86_64-apple-darwin.tar.xz"
-      sha256 "03f19f5b7daa28ce8ac6205fe3b9c4be2cdc781eb5cfa1d45c291d6cd7f29987"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.4/aiobscura-x86_64-apple-darwin.tar.xz"
+      sha256 "4217e0f5454e10b4062e791856894a793711900775d7c65eeda973daec33c377"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.3/aiobscura-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "605374ecc4ad6486a10de9e342d6d2f63cf7b1e20abf91d1a85873df49eabdad"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.4/aiobscura-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1a91ea017c7f9f40a685d3d651278063a35059c40910c1350ed45e9fb1d92312"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.3/aiobscura-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "99adf5e434ba2d58f143e17880f63e224a7429c116b29844deda5d2e6ef9a087"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.4/aiobscura-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c225c5b6fadd8b6218cb88a36339876b80e38c5ca31e2b732ef6101d35c19e5a"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,10 @@ class Aiobscura < Formula
   end
 
   def install
-    bin.install "aiobscura", "aiobscura-sync" if OS.mac? && Hardware::CPU.arm?
-    bin.install "aiobscura", "aiobscura-sync" if OS.mac? && Hardware::CPU.intel?
-    bin.install "aiobscura", "aiobscura-sync" if OS.linux? && Hardware::CPU.arm?
-    bin.install "aiobscura", "aiobscura-sync" if OS.linux? && Hardware::CPU.intel?
+    bin.install "aiobscura", "aiobscura-analyze", "aiobscura-sync" if OS.mac? && Hardware::CPU.arm?
+    bin.install "aiobscura", "aiobscura-analyze", "aiobscura-sync" if OS.mac? && Hardware::CPU.intel?
+    bin.install "aiobscura", "aiobscura-analyze", "aiobscura-sync" if OS.linux? && Hardware::CPU.arm?
+    bin.install "aiobscura", "aiobscura-analyze", "aiobscura-sync" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
 
