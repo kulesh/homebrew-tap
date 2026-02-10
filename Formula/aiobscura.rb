@@ -1,25 +1,25 @@
 class Aiobscura < Formula
   desc "AI Agent Activity Monitor"
   homepage "https://github.com/kulesh/aiobscura"
-  version "0.1.8"
+  version "0.1.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.8/aiobscura-aarch64-apple-darwin.tar.xz"
-      sha256 "91dd22517d5f600f43ea73d52a77cf18663e90dbb1816aea52601c201f23f1f5"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-aarch64-apple-darwin.tar.xz"
+      sha256 "4dec4ad5fc8dc75dc0ce91ea8046d3f7c3c0ed975991ba304d303c3f0a204dad"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.8/aiobscura-x86_64-apple-darwin.tar.xz"
-      sha256 "a135267cd3d887ae0e4a33cfbc43ff50769e4b960eecf2ef8deaa6e9a8cbd846"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-x86_64-apple-darwin.tar.xz"
+      sha256 "6ef63d4dddca36d3a782411033f3c8743ca356cc9fd6710d7525855cea07344a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.8/aiobscura-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1384de5f1b9b69f42a53a7c9b9ab5d95d79d83c2c8a32ca842ac484c4545190e"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4eeb189fd2ff3a5f212a1dcbe2ee3450fc9ec0aa80fda2ddcda60f2e35d8c847"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.8/aiobscura-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1d59d2b1aad6177385119f6a53543a954d9ed2c0b5bf690fc3c5e182004bcbdd"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8d3f093304d6dc5d8eca2dcf0c5920193b2ef4508a9dc4bb1a2bbfcf8de8162a"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
