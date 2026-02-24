@@ -1,25 +1,25 @@
 class AiobscuraWrapped < Formula
   desc "AI Agent Wrapped - Year in Review CLI"
   homepage "https://github.com/kulesh/aiobscura"
-  version "0.1.10"
+  version "0.1.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-aarch64-apple-darwin.tar.xz"
-      sha256 "1bca1a591e6135f8ae72edd3a58683bdfeb178a11542d0de05650f6fddee5d56"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.11/aiobscura-wrapped-aarch64-apple-darwin.tar.xz"
+      sha256 "e2d9955fb0b6252470107816415c671686aee00dc95bd6911061151a27583840"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-x86_64-apple-darwin.tar.xz"
-      sha256 "268ea0b25d0712994666bed5aa77cda140d7efbd3b5f49f76df3f8ac5cc5fbc4"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.11/aiobscura-wrapped-x86_64-apple-darwin.tar.xz"
+      sha256 "4b5db6d2d76d0f008a29f0ea1a4508930127c697bc31e0ca5165d2635c3433ba"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3bac9e32b6fcf30f77162baa8be43633ab86228fea6c24f74974ef07368154b9"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.11/aiobscura-wrapped-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "aeb41a838538c40c7f1fcbcfdfe4767544df650e356379ff25ddfaaad7f85f31"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c7286d9676cd0df5bfbb76234b89e0216d18f7e8c7ecec6d7948bd7053294869"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.11/aiobscura-wrapped-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "164184405cb7292d68800a87030d1ad7662a23b37acbca444921606db9c618cd"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
