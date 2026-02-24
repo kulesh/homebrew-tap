@@ -1,25 +1,25 @@
 class AiobscuraWrapped < Formula
   desc "AI Agent Wrapped - Year in Review CLI"
   homepage "https://github.com/kulesh/aiobscura"
-  version "0.1.9"
+  version "0.1.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-wrapped-aarch64-apple-darwin.tar.xz"
-      sha256 "e8feed5fd00a58dc0408c25cc17231d45f796db5ffd09c083f7c1433b3265279"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-aarch64-apple-darwin.tar.xz"
+      sha256 "1bca1a591e6135f8ae72edd3a58683bdfeb178a11542d0de05650f6fddee5d56"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-wrapped-x86_64-apple-darwin.tar.xz"
-      sha256 "070e9af5e2b5c7d5830e4f4b6c48fd0420b95a7abe6ec372413b71fa937ba8d7"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-x86_64-apple-darwin.tar.xz"
+      sha256 "268ea0b25d0712994666bed5aa77cda140d7efbd3b5f49f76df3f8ac5cc5fbc4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-wrapped-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3975915ccf82e924287fa1256b08627f1de72f2982c18824bfae2f3ac1d6b8b1"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3bac9e32b6fcf30f77162baa8be43633ab86228fea6c24f74974ef07368154b9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.9/aiobscura-wrapped-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d094632598c09b1e7d4756dce60953ba5c7976b24bd5a6a63898319caf52f07c"
+      url "https://github.com/kulesh/aiobscura/releases/download/v0.1.10/aiobscura-wrapped-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c7286d9676cd0df5bfbb76234b89e0216d18f7e8c7ecec6d7948bd7053294869"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
