@@ -1,15 +1,15 @@
 class Seatbelt < Formula
   desc "macOS CLI that makes sandbox-exec usable by humans"
   homepage "https://github.com/kulesh/seatbelt"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/kulesh/seatbelt/releases/download/v0.1.2/seatbelt-bin-aarch64-apple-darwin.tar.xz"
-      sha256 "a422537898cf6bd600d958579819192bb5ac6b8633c353118f43798594d1c7d8"
+      url "https://github.com/kulesh/seatbelt/releases/download/v0.1.3/seatbelt-bin-aarch64-apple-darwin.tar.xz"
+      sha256 "168f195c92a1a4cd770a6f14504aa6de6af13033691e11af54ef8d09c00cf944"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kulesh/seatbelt/releases/download/v0.1.2/seatbelt-bin-x86_64-apple-darwin.tar.xz"
-      sha256 "57b6b6974f3fc0a64d0d1e998467c6599241438b984d8da33416d869df372861"
+      url "https://github.com/kulesh/seatbelt/releases/download/v0.1.3/seatbelt-bin-x86_64-apple-darwin.tar.xz"
+      sha256 "8c66e03480dd85a18c5e68d63951c817672c43d0fd0f265bea69576c6582dfd0"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
